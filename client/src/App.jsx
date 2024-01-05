@@ -1,14 +1,16 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Checkout from './components/checkout';
-import ProductListing from './components/productListing';
-import ShoppingCart from './components/shoppingCart';
+import Appbar from './components/Appbar';
+import Checkout from './pages/checkout';
+import ProductListing from './pages/productListing';
+import ShoppingCart from './pages/shoppingCart';
 
 export default function App() {
   return (
     <div>
       <Router>
+        <Appbar/>
         <Routes>
-          <Route path={"/product-listing"} element={<ProductListing/>} />
+          <Route path={"/"} element={<ProductListing/>} />
           <Route path={"/checkout"} element={<Checkout/>} />
           <Route path={"/shopping-cart"} element={<ShoppingCart/>} />
         </Routes>
