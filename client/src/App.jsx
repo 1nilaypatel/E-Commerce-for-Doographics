@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Appbar from './components/Appbar';
+import Appbar from './components/appbar';
 import Checkout from './pages/checkout';
 import ProductListing from './pages/productListing';
 import ShoppingCart from './pages/shoppingCart';
