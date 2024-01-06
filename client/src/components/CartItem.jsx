@@ -1,12 +1,14 @@
-
+import { useDispatch } from 'react-redux';
+import { addToCart, removeFromCart } from '../redux/product/productSlice';
 
 export default function CartItem({ item }) {
-  const handleIncreaseQuantity = (itemId) => {
-    
+  const dispatch = useDispatch();
+  const handleIncreaseQuantity = () => {
+    dispatch(addToCart(item));
   };
 
-  const handleDecreaseQuantity = (itemId) => {
-    
+  const handleDecreaseQuantity = () => {
+    dispatch(removeFromCart(item.id));
   };
 
   return (
@@ -24,14 +26,14 @@ export default function CartItem({ item }) {
       </div>
       <div className="flex items-center gap-4">
         <button
-          onClick={() => handleDecreaseQuantity(item.id)}
+          onClick={() => handleDecreaseQuantity()}
           className="bg-gray-300 text-gray-700 py-1 px-2 rounded-full"
         >
           -
         </button>
         <p>{item.quantity}</p>
         <button
-          onClick={() => handleIncreaseQuantity(item.id)}
+          onClick={() => handleIncreaseQuantity()}
           className="bg-gray-300 text-gray-700 py-1 px-2 rounded-full"
         >
           +

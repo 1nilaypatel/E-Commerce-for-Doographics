@@ -22,7 +22,17 @@ const productSlice = createSlice({
       state.totalPrice += price;
     },
     removeFromCart: (state, action) => {
-      
+      const id = action.payload;
+      const existingProductId = state.products.findIndex((product) => product.id === id);
+      if (existingProductId !== -1) {
+        const removedProduct = state.products[existingProductId];
+        removedProduct.quantity--;
+        state.totalItems--;
+        state.totalPrice -= removedProduct.price;
+        if(removedProduct.quantity === 0){
+          state.products.splice(existingProductId, 1);
+        }
+      }
     },
   },
 });
