@@ -24,6 +24,11 @@ export default function ListingItem({ product }) {
               Add to Cart
             </button>
           </Link>
+          <Link to="">
+            <button className="bg-gray-800 text-white py-2 px-4 mt-2 rounded-lg hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>

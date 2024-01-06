@@ -2,17 +2,15 @@ import { Link } from 'react-router-dom';
 
 export default function Appbar() {
   return (
-    <header className="fixed top-0 w-full bg-gray-800 text-white z-50">
+    <header className="fixed top-0 w-full bg-gray-800 text-slate-200 z-50">
       <div className="flex justify-between items-center p-4 max-w-6xl mx-auto">
         <Link to="/" className="text-2xl font-bold">
-          E-Commerce
+          <span>Fake </span>
+          <span className='text-slate-400'>E-Commerce</span>
         </Link>
-        <ul className="flex gap-5">
+        <ul className="flex gap-5 font-semibold">
           <Link to="/shopping-cart" className="hover:underline">
-            Your Cart
-          </Link>
-          <Link to="/checkout" className="hidden sm:inline hover:underline">
-            Checkout
+            My Cart
           </Link>
         </ul>
       </div>
