@@ -32,22 +32,19 @@ export default function ProductListing() {
       }
     };
     fetchProducts();
-  }, [page]);
+  }, [page, cache]);
 
   const onShowMoreClick = () => {
     setPage((prevPage) => prevPage + 1);
   };
 
-  if (error) {
-    return <p className='text-red-500 font-medium sm:font-semibold mt-5'>Error: {error}</p>;
-  }
-
   return (
     <div className="mt-20 p-4 flex flex-wrap justify-center gap-4">
+      {error && <p className='text-red-500 font-medium sm:font-semibold mt-5'>Error: {error}</p>}
       {!loading && products.length === 0 && (
         <p className='text-xl text-slate-300'>No Products Available!</p>
       )}
-      {loading && products.length > 0 && (
+      {loading && (
         <p className='text-4xl text-center w-full'>
           Loading...
         </p>
