@@ -29,8 +29,8 @@ export default function Checkout() {
           />
           <input 
             type="text"
-            placeholder="CVC"
-            id="cvc"
+            placeholder="CVV"
+            id="cvv"
             className="border rounded-lg p-3 w-1/4 focus:outline-gray-800"
           />
         </div>
