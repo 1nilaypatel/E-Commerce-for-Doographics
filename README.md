@@ -4,7 +4,7 @@
 
 **Features:**
 
-- Product listing with pagination
+- Product listing with Show More for infinite scrolling
 - Shopping cart management
 - Checkout simulation
 - Integration with Fake Store API
@@ -20,19 +20,23 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/1nilaypatel/E-Commerce-for-Doographics.git](https://github.com/1nilaypatel/E-Commerce-for-Doographics.git)
+   git clone https://github.com/1nilaypatel/E-Commerce-for-Doographics.git
 
 
 2. **Move to the Client Folder:**
+    ```bash
     cd client
 
 3. **Install NPM dependencies:**
+    ```bash
     npm install
 
 4. **Run the project:**
+    ```bash
     npm run dev
 
 5. **Access the application in your browser (port may vary):**
-    example http://localhost:5173/
+    ```bash
+    http://localhost:5173/
 
 ### Note: Ensure you have Node.js and npm installed on your system.
