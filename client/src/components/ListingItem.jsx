@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/product/productSlice';
 
-
-
 export default function ListingItem({ product }) {
   const dispatch = useDispatch();
 
@@ -35,7 +33,7 @@ export default function ListingItem({ product }) {
           >
             Add to Cart
           </button>
-          <Link to="">
+          <Link to={`/product-details/${product.id}`}>
             <button className="bg-gray-800 text-white py-2 px-4 mt-2 rounded-lg hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray">
               View Details
             </button>
