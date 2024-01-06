@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Appbar from './components/appbar';
-import Checkout from './pages/checkout';
-import ProductListing from './pages/productListing';
-import ShoppingCart from './pages/shoppingCart';
+import Appbar from './components/Appbar';
+import Checkout from './pages/Checkout';
+import ProductListing from './pages/ProductListing';
+import ShoppingCart from './pages/ShoppingCart';
 
 export default function App() {
   return (

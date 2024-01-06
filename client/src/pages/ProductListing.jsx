@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ListingItem from '../components/listingItem';
+import ListingItem from '../components/ListingItem';
 
 export default function ProductListing() {
   const [products, setProducts] = useState([]);
