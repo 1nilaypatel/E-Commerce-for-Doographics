@@ -45,12 +45,14 @@ export default function Checkout() {
           id="yourname"
           className="border rounded-lg p-3 focus:outline-gray-800"
           onChange={handleInputChange}
+          required
         />
         <textarea
           placeholder="Address"
           id="address"
           className="border rounded-lg p-3 focus:outline-gray-800"
           onChange={handleInputChange}
+          required
         />
         <input 
           type="text"
@@ -58,6 +60,7 @@ export default function Checkout() {
           id="cardNumber"
           className="border rounded-lg p-3 focus:outline-gray-800"
           onChange={handleInputChange}
+          required
         />
         <div className="flex gap-3">
           <input 
@@ -66,6 +69,7 @@ export default function Checkout() {
             id="expiry"
             className="border rounded-lg p-3 flex-1 focus:outline-gray-800"
             onChange={handleInputChange}
+            required
           />
           <input 
             type="text"
@@ -73,6 +77,7 @@ export default function Checkout() {
             id="cvv"
             className="border rounded-lg p-3 w-1/4 focus:outline-gray-800"
             onChange={handleInputChange}
+            required
           />
         </div>
         <button
