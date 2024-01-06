@@ -11,7 +11,15 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      
+      const { id, image, price, title } = action.payload;
+      const existingProduct = state.products.find((product) => product.id === id);
+      if (existingProduct) {
+        existingProduct.quantity++;
+      } else {
+        state.products.push({ id, image, price, title, quantity: 1 });
+      }
+      state.totalItems++;
+      state.totalPrice += price;
     },
     removeFromCart: (state, action) => {
       

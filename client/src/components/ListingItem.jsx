@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/product/productSlice';
+
+
 
 export default function ListingItem({ product }) {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+  }
+
   return (
     <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
       <img  
@@ -19,11 +29,12 @@ export default function ListingItem({ product }) {
           ₹{product.price.toLocaleString('en-US') * 100}
         </p>
         <div className='flex gap-10'>
-          <Link to="">
-            <button className="bg-green-500 text-white py-2 px-4 mt-2 rounded-lg hover:bg-green-600 focus:outline-none focus:shadow-outline-green">
-              Add to Cart
-            </button>
-          </Link>
+          <button 
+            onClick={handleAddToCart}
+            className="bg-green-500 text-white py-2 px-4 mt-2 rounded-lg hover:bg-green-600 focus:outline-none focus:shadow-outline-green"
+          >
+            Add to Cart
+          </button>
           <Link to="">
             <button className="bg-gray-800 text-white py-2 px-4 mt-2 rounded-lg hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray">
               View Details
