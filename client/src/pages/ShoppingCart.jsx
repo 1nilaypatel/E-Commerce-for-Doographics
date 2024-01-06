@@ -8,7 +8,7 @@ export default function ShoppingCart() {
   const cartItems = useSelector((state) => state.cart.products);
 
   return (
-    <div className="flex flex-col min-h-screen mt-20">
+    <div className="flex flex-col min-h-screen mt-16 mb-20">
       <div className="flex flex-col p-4">
         {cartItems.map((item) => (
           <CartItem key={item.id} item={item} />

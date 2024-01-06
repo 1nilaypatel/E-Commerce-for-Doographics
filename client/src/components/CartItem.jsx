@@ -2,11 +2,11 @@
 
 export default function CartItem({ item }) {
   const handleIncreaseQuantity = (itemId) => {
-    // Implement logic to increase quantity for the item with itemId
+    
   };
 
   const handleDecreaseQuantity = (itemId) => {
-    // Implement logic to decrease quantity for the item with itemId
+    
   };
 
   return (
@@ -18,7 +18,7 @@ export default function CartItem({ item }) {
           className="h-20 w-20 object-contain text-black"
         />
         <div>
-          <p className="font-semibold">{item.title}</p>
+          <p className="line-clamp-1 font-semibold">{item.title}</p>
           <p>Price / Unit: ₹{item.price}</p>
         </div>
       </div>

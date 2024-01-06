@@ -12,10 +12,10 @@ export default function Appbar() {
           <span className='text-slate-400'>E-Commerce</span>
         </Link>
         <ul className="flex gap-5 font-semibold items-center">
-          <Link to="/shopping-cart" className="relative hover:underline">
+          <Link to="/shopping-cart" className="hover:underline">
             <span>My Cart</span>
             {totalItems > 0 && (
-              <span className="bg-green-500 text-white px-2 py-1 rounded-full absolute -top-1 -right-9">
+              <span className="bg-green-500 text-white px-2 py-1 rounded-full ml-1">
                 {totalItems}
               </span>
             )}
