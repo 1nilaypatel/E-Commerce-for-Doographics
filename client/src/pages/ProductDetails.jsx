@@ -32,10 +32,7 @@ export default function ProductDetails() {
           }
           const data = await response.json();
           setProduct(data);
-          setCache({
-            ...cache,
-            [id]: data,
-          });
+          setCache({ ...cache, [id]: data });
           setLoading(false);
           setError(null);
         }
@@ -49,7 +46,7 @@ export default function ProductDetails() {
   }, [id, cache]);
 
   if (loading) {
-    return <p className='text-blue-500 font-medium sm:font-semibold mt-5'>Loading...</p>;
+    return <p className='font-medium sm:font-semibold mt-5'>Loading...</p>;
   }
 
   if (error) {

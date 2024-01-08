@@ -26,14 +26,14 @@ export default function CartItem({ item }) {
       </div>
       <div className="flex items-center gap-4">
         <button
-          onClick={() => handleDecreaseQuantity()}
+          onClick={handleDecreaseQuantity}
           className="bg-gray-300 text-gray-700 py-1 px-2 rounded-full"
         >
           -
         </button>
         <p>{item.quantity}</p>
         <button
-          onClick={() => handleIncreaseQuantity()}
+          onClick={handleIncreaseQuantity}
           className="bg-gray-300 text-gray-700 py-1 px-2 rounded-full"
         >
           +
